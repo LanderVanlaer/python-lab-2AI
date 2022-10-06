@@ -4,9 +4,14 @@
 #       𝑛
 # n! =  ∏ 𝑘
 #      𝑘=1
+#
+# Use a for-loop in the function to perform the calculation. Do not use a recursive function.
 
 def fact(n):
-    return 1 if n <= 0 else fact(n - 1) * n
+    total = 1
+    for i in range(1, n + 1):
+        total *= i
+    return total
 
 
 print(fact(1))
